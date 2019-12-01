@@ -1,4 +1,4 @@
-# Custom Components
+# Intro
 
 Custom components allow the creation of custom HTML tags, modify existing tags or extend tags created by other developers. Custom components can be created using just Vanilla HTML/CSS/JS
 
