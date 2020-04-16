@@ -61,6 +61,15 @@ function findActive() {
 ```
 > The loop will stop running when a does not have a shadowRoot attached anymore, which means it is at the last layer of the DOM tree. 
 
+`delegateFocus: true` is another option to modify focusing behaviour, however it is not supported in IE and Safari according to [MDN]([https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus](https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus)). The focusing behaviour now becomes:
+- If an internal node is not focusable when clicked, then the first node up the DOM tree that is focusable will be focused
+- If an internal node is focused, so is the host component
+
+For the detailed example, check out https://developers.google.com/web/fundamentals/web-components/shadowdom#focus
+
+For more tips and tricks regarding shadow DOM, checkout https://developers.google.com/web/fundamentals/web-components/shadowdom#tricks
+
 ## References
 1. [https://developers.google.com/web/fundamentals/web-components/shadowdom#advanced](https://developers.google.com/web/fundamentals/web-components/shadowdom#advanced)
+2. [https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus](https://developer.mozilla.org/en-US/docs/Web/API/ShadowRoot/delegatesFocus)
 
